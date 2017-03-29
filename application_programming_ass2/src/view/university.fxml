@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"  
+        fx:controller="controller.universityController"
+      alignment="center"  styleClass = "root" >
+    
+    <!--    fx:controller = "controllers.UniversityController"-->
+    
+    <HBox alignment="center" prefHeight="100">   
+
+        <ImageView>
+		<image>
+			<Image url="@logo_2.png"/>
+		</image>
+	</ImageView>
+        
+        <Text styleClass="heading" text="Timetable System" />
+    </HBox>
+    <HBox styleClass = "contentBackground" alignment="center"  >
+        <ListView items="$controller.university.students" fx:id="studentsLv"  prefHeight="200" prefWidth = "300"  >
+            <!--  remember doing this items = "$(controller.university.students)"-->
+            <placeholder>
+                <Label text = "No students" />
+            </placeholder>
+        </ListView>
+    </HBox>
+    
+    <HBox  styleClass = "footerBackground" alignment="center" spacing="10"  >
+        <Button fx:id = "addStudentBtn" text="Add Student" onAction="#handleAddStudent" />
+        <!--        add it later onAction = "#handleAddStudent"-->
+        <Button fx:id = "removeBtn"  text="Remove Student" disable = "true" onAction="#handleRemoveStudent"  />
+        <Button fx:id = "loginBtn" text="Login" disable = "true" onAction="#handleLogin"  />
+    </HBox>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</VBox>
+ 
+
+

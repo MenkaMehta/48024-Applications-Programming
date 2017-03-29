@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?> 
+
+<VBox  xmlns:fx="http://javafx.com/fxml"  
+       fx:controller="controller.studentController"
+       alignment="CENTER"  styleClass = "root" >
+    
+    <stylesheets>
+        <URL value = "@style.css"/>
+    </stylesheets>
+    <HBox spacing="10" styleClass = "studentDetails" >   
+        <!--         change here!!!-->
+        <Text styleClass="heading" text="${'Logged in as ' + controller.student.name}" />
+     
+        <Pane HBox.hgrow="ALWAYS" />
+        <GridPane styleClass = "gridPaneBackground" alignment = "TOP_RIGHT" hgap ="10" vgap ="10"  >
+            <Label text = "Student number: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Text  text="${controller.student.number}" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text = "Attendance: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Text fx:id = "attendanceStatus" text = "" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            
+            <Label text = "Scholarship: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Text  fx:id="scholarshipStatus"  GridPane.columnIndex="1" GridPane.rowIndex="2" />
+           
+            
+        </GridPane>
+    </HBox>
+       
+    <VBox alignment ="center"  styleClass="tableContent" spacing ="10">
+        <HBox alignment = "CENTER_LEFT">
+            <Text styleClass="heading" text="My Activities"  />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button disable = "true"  fx:id = "withdrawBtn" text="Withdraw" onAction="#handleWithdraw" alignment ="CENTER_RIGHT"   />
+        </HBox>
+        <TableView  styleClass ="tableGridPane" fx:id="activitiesTv"  prefWidth="800" prefHeight="200">
+            
+            <placeholder>
+                <Label text="Not enrolled in any activities"/>
+            </placeholder>
+            <columns>
+                    
+                <TableColumn fx:id="subjectClm" text="Subject">
+                    
+                    <cellValueFactory>
+                        <PropertyValueFactory property="subject"/>
+                    </cellValueFactory>
+                </TableColumn>
+                        
+                <TableColumn fx:id="groupClm" text="Group">
+                    
+                    <cellValueFactory>
+                        <PropertyValueFactory property="group"/>
+                    </cellValueFactory> 
+                </TableColumn>
+                        
+                <TableColumn fx:id="activitiesClm" text="Activities">
+                    
+                    <cellValueFactory>
+                        <PropertyValueFactory property="number"/>
+                    </cellValueFactory>
+                </TableColumn>
+                        
+                <TableColumn fx:id="dayClm" text="Day">
+               
+                    <cellValueFactory>
+                        <PropertyValueFactory property="day"/>
+                    </cellValueFactory> 
+                </TableColumn>
+                        
+                <TableColumn fx:id="startClm" text="Start">
+                   
+                    <cellValueFactory>
+                        <PropertyValueFactory property="start" />
+                    </cellValueFactory> 
+                </TableColumn>
+                        
+                <TableColumn fx:id="durationClm" text="Duration">
+                    
+                    <cellValueFactory>
+                        <PropertyValueFactory property="duration"/>
+                    </cellValueFactory> 
+                </TableColumn>
+                        
+                <TableColumn fx:id="roomClm" text="Room">
+                    
+                    <cellValueFactory>
+                        <PropertyValueFactory property="room"/>
+                    </cellValueFactory> 
+                </TableColumn>
+                        
+                <TableColumn fx:id="capacityClm" text="Capacity">
+                   
+                    <cellValueFactory>
+                        <PropertyValueFactory property="capacity"/>
+                    </cellValueFactory> 
+                </TableColumn>
+                        
+                <TableColumn fx:id="enrolledClm" text="Enrolled">
+                 
+                    <cellValueFactory>
+                        <PropertyValueFactory property="enrolled"/>
+                    </cellValueFactory> 
+                </TableColumn>
+            </columns>
+        </TableView>
+        
+        <HBox>
+            <HBox alignment ="TOP_LEFT" spacing = "10">
+                <Text styleClass="heading" text="Enrol into Subject"  />
+                <ComboBox fx:id="subjectCmb" promptText="choose" items = "${controller.student.university.subjects}" onAction = "#handleSelectSubject"/>
+            </HBox>
+            
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button fx:id = "enrolBtn" disable = "true" text="Enrol" onAction="#handleEnrol"    />
+        </HBox>
+        
+        <TableView styleClass ="tableGridPane"  fx:id="activitiesTv2"  prefWidth="800" prefHeight="200">
+        
+            <placeholder>
+                <Label text= " "/>
+            </placeholder>
+            <columns>
+                <TableColumn fx:id="subjectClm2" text="Subject" >
+
+                </TableColumn>
+                        
+                <TableColumn fx:id="groupClm2" text="Group">
+             
+                </TableColumn>
+                        
+                <TableColumn fx:id="activitiesClm2" text="Activities">
+                  
+                </TableColumn>
+                        
+                <TableColumn fx:id="dayClm2" text="Day">
+               
+                </TableColumn>
+                        
+                <TableColumn fx:id="startClm2" text="Start">
+                   
+                </TableColumn>
+                        
+                <TableColumn fx:id="durationClm2" text="Duration">
+                   
+                </TableColumn>
+                        
+                <TableColumn fx:id="roomClm2" text="Room">
+                    
+                </TableColumn>
+                        
+                <TableColumn fx:id="capacityClm2" text="Capacity">
+                   
+                </TableColumn>
+                        
+                <TableColumn fx:id="enrolledClm2" text="Enrolled">
+                   
+                </TableColumn>
+            </columns>
+        </TableView>
+          
+    </VBox>
+      
+    <HBox  styleClass = "footerBackground" alignment="center" spacing="10" >
+        <Button fx:id = "logoutBtn" text="Logout" onAction="#handleLogout" alignment = "CENTER"/>
+    </HBox>
+    
+    
+    
+    
+</VBox>

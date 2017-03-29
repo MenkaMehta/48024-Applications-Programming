@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24/05/2016, 5:06:13 PM
+    Author     : 12195032
+*/
+
+.root {
+  -fx-background-color: #0099cc;
+}
+
+
+.headerBackgroud{
+    -fx-background-color: #0099cc;
+    -fx-padding: 10 10 10 10; 
+}
+
+.heading {
+  -fx-fill: #ffffff;
+  -fx-font-size: 32px;
+  -fx-font-family: "Arial";
+  
+}
+
+
+.contentBackground{
+    -fx-background-color: #00749b;
+  -fx-padding: 14; 
+}
+
+
+
+.tableContent{
+    -fx-background-color: #00749b;
+}
+
+.gridPaneBackground{
+   -fx-background-color: #ffffff;
+/*   -fx-padding: 20px;*/
+      -fx-padding: 20 20 20 20;
+}
+
+.tableGridPane
+{
+/*    -fx-padding: 15 15 15 15;*/
+}
+
+.studentDetails
+{
+    -fx-padding: 15 15 15 15;
+}
+
+
+.footerBackground{
+    
+     -fx-background-color: #252b2b;
+     -fx-padding: 10 10 10 10; 
+}
+
+.Label {
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333333;
+}
+
+
+
+Button {
+  -fx-text-fill: #ffffff;
+  -fx-font-family: "Arial";
+  -fx-font-weight: bold;
+  -fx-background-color: #00bfff;
+
+}
+
+.error{
+    -fx-fill: FIREBRICK;
+    -fx-alignment: CENTER;
+}
+
+Button:hover {
+  -fx-background-color: #00bfff;
+ }
+
+
+
