@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=number\ name
+comment0.target=Student(java.lang.String,\ java.lang.String)
+comment1.params=number
+comment1.target=boolean\ hasNumber(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getNumber()
+comment3.params=activity
+comment3.target=void\ addEnrolledActivityToList(Activity)
+comment4.params=
+comment4.target=void\ viewEnrolledActivity()
+comment5.params=activity
+comment5.target=void\ removeEnrolledActivity(Activity)
+comment6.params=subject
+comment6.target=Activity\ hasCmp1(Subject)
+comment7.params=subject\ group
+comment7.target=Activity\ hasSubjectGroup(Subject,\ java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=
+comment9.target=void\ removeEnrolled()
+numComments=10
