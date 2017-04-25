@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+		alignment="center" spacing="10"
+		styleClass="root">
+
+	<Label text="Username:"/>
+	<TextField/>
+	<Button text="Login"/>
+	<ImageView>
+		<image>
+			<Image url="@flower.png"/>
+		</image>
+	</ImageView>
+	
+	<!-- <stylesheets><URL value="@style.css"/></stylesheets> -->
+	
+</HBox>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+		spacing="10"
+		styleClass="root" fx:controller="ControlsController">
+
+	<Label text="Username:"/>
+	<TextField/>
+	<PasswordField/>
+	<Button text="Login"/>
+	<CheckBox text="Agree" fx:id="agreeCb"/>
+	<HBox spacing="10">
+		<fx:define><ToggleGroup fx:id="genderTg"/></fx:define>
+		<RadioButton text="Male" userData="m" toggleGroup="$genderTg"/>
+		<RadioButton text="Female" userData="f" toggleGroup="$genderTg"/>
+	</HBox>
+	<HBox spacing="10">
+		<fx:define><ToggleGroup fx:id="musicTg"/></fx:define>
+		<ToggleButton text="On" userData="on" toggleGroup="$musicTg"/>
+		<ToggleButton text="Off" userData="off" toggleGroup="$musicTg"/>
+	</HBox>
+	<ComboBox fx:id="accountsCmb" promptText="Select an account" items="${controller.customer.accounts}"/>
+	<ChoiceBox fx:id="accountsChb" items="${controller.customer.accounts}"/>
+	<Slider min="1" max="5" showTickMarks="true" showTickLabels="true" majorTickUnit="1"/>
+</VBox>
